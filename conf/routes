@@ -1,0 +1,46 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# An example controller showing a sample home page
+
+# Map static resources from the /public folder to the /assets URL path
+
+# Existing routes
+#GET           /employees/getAllEmployees          controllers.EmployeeController.getAllEmployees
+#GET           /employees/getEmployeebyId/:id       controllers.EmployeeController.getEmployee(id: String)
+DELETE        /employees/deleteEmployeebyId/:id    controllers.EmployeeController.deleteEmployee(id: String)
+POST          /employees/addEmployee               controllers.EmployeeController.addEmployee
+PUT           /employees/updateEmployeebyId/:id    controllers.EmployeeController.updateEmployee(id: String)
+GET           /employees/getAllEmployees              controllers.EmployeeController.getAllEmployees(page: Int, size: Int)
+GET           /employees/searchEmployees              controllers.EmployeeController.searchEmployees(query: String, page: Int, size: Int)
+
+# New routes for getting and deleting employees by name
+#GET           /employees/getEmployeesByName/:name     controllers.EmployeeController.getEmployeesByName(name: String)
+#GET           /employees/search                       controllers.EmployeeController.getEmployeesByName(name: String)
+#DELETE        /employees/deleteEmployeesByName/:name  controllers.EmployeeController.deleteEmployeesByName(name: String)
+
+
+
+# Routes for EmployeeController
+
+# Get all employees (can be paginated)
+#GET     /employees                         controllers.EmployeeController.getEmployeesWithPagination(page: Int, size: Int)
+
+# Get employee by ID
+#GET     /employee/employeeById/:id                      controllers.EmployeeController.getEmployee(id: String)
+
+# Add a new employee
+#POST    /employee/addemployee                         controllers.EmployeeController.addEmployee()
+
+# Update an existing employee
+#PUT     /employee/updateEmployee/:id                      controllers.EmployeeController.updateEmployee(id: String)
+
+# Delete employee by ID
+#DELETE  /employee/deleteEmployee/:id                      controllers.EmployeeController.deleteEmployee(id: String)
+
+#GET     /employee/getAllemployees                       controllers.EmployeeController.getAllEmployees()
+OPTIONS       /employees/*file                        controllers.EmployeeController.options(file: String)
+
+
+
